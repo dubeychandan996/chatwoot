@@ -12,7 +12,7 @@ class Twilio::SendOnTwilioService < Base::SendOnChannelService
 
   def message_params
     params = {
-      body: message.content,
+      body: 'ds' + message.content,
       from: channel.phone_number,
       to: contact_inbox.source_id
     }
