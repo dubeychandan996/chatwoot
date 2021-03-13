@@ -33,5 +33,9 @@ class Channel::TwilioSms < ApplicationRecord
   def name
     medium == 'sms' ? 'Twilio SMS' : 'Whatsapp'
   end
-
+  
+  def has_24_hour_messaging_window?
+    medium == 'whatsapp'
+  end
+  
 end
