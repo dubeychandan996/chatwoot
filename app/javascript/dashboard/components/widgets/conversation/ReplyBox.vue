@@ -134,7 +134,7 @@ export default {
     },
     isPrivate() {
       if (this.currentChat.can_reply) {
-        return this.isOnPrivateNote;
+        return true;
       }
       return true;
     },
