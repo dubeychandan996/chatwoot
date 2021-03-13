@@ -68,7 +68,7 @@ class Conversation < ApplicationRecord
   delegate :auto_resolve_duration, to: :account
 
   def can_reply?
-    return true unless inbox&.channel&.has_24_hour_messaging_window?
+    return true
 
     last_incoming_message = messages.incoming.last
 
